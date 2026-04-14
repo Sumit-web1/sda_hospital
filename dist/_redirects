@@ -1,0 +1,21 @@
+# Admin routes
+/admin-login    /index.html   200
+/admin-dashboard    /index.html   200
+
+# Doctor routes
+/doctor-login    /index.html   200
+/doctor-dashboard    /index.html   200
+
+# Receptionist routes
+/receptionist-login    /index.html   200
+/receptionist-dashboard    /index.html   200
+
+# Other routes
+/find-doctor    /index.html   200
+/about    /index.html   200
+/doctors    /index.html   200
+/services    /index.html   200
+/departments    /index.html   200
+
+# Fallback
+/*    /index.html   200

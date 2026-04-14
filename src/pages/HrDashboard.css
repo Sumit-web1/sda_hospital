@@ -1,0 +1,48 @@
+.hr-layout {
+  min-height: 100vh;
+  background: #f6f8fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-topbar {
+  height: 64px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hr-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.hr-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #eef2ff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #4f46e5;
+  cursor: pointer;
+}
+
+.hr-logout:hover {
+  background: #e0e7ff;
+}
+
+.hr-content {
+  flex: 1;
+  padding: 24px;
+  overflow: auto;
+}

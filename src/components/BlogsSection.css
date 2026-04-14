@@ -1,0 +1,373 @@
+.apollo-blogs-section {
+  background-color: #f4f7ff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.apollo-blogs-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.apollo-blogs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.apollo-blogs-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.apollo-explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.apollo-blogs-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.apollo-blogs-slider {
+  flex: 1;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f8f9fa;
+}
+
+.apollo-blog-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.apollo-blog-card.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.apollo-blog-card.hidden {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.apollo-blog-card.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.apollo-card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.apollo-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+
+.apollo-blog-card:hover .apollo-card-image img {
+  transform: scale(1.05);
+}
+
+
+.apollo-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 40px 24px 24px;
+  color: white;
+}
+
+.apollo-card-category {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.apollo-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  color: white;
+}
+
+.apollo-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apollo-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.apollo-nav-btn:hover {
+  border-color: #ff6b35;
+  color: #ff6b35;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+.apollo-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.apollo-dots-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.apollo-dot {
+  max-width: 12px !important;
+  max-height: 12px !important;
+  border-radius: 50%;
+  border: none;
+  background: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apollo-dot.active {
+  max-width: 12px !important;
+  max-height: 12px !important;
+  background: #ff6b35;
+  transform: scale(1.2);
+}
+
+.apollo-dot:hover {
+  background: #ff6b35;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .apollo-blogs-section {
+    padding: 60px 0;
+  }
+
+  .apollo-blogs-container {
+    padding: 0 16px;
+  }
+
+  .apollo-blogs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .apollo-blogs-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .apollo-explore-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .apollo-blogs-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .apollo-blogs-slider {
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .apollo-blogs-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .apollo-blog-card {
+    border-radius: 16px;
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    height: 320px;
+  }
+
+  .apollo-blog-card.mobile-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+  }
+
+  .apollo-card-image {
+    border-radius: 16px;
+  }
+
+  .apollo-card-overlay {
+    padding: 30px 20px 20px;
+  }
+
+  .apollo-card-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .apollo-card-category {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+  }
+
+  .apollo-navigation {
+    display: none;
+  }
+
+  .apollo-dots-navigation {
+    margin-top: 20px;
+    gap: 6px;
+  }
+
+  .apollo-dot {
+    min-width: 8px !important;
+    min-height: 8px !important;
+  }
+
+  .apollo-dot.active {
+    max-width: 10px !important;
+    min-height: 10px !important;
+    min-width: 10px !important;
+    max-height: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .apollo-blogs-slider {
+    padding: 0 12px;
+    gap: 12px;
+  }
+
+  .apollo-blog-card {
+    min-width: 260px;
+    height: 300px;
+  }
+
+  .apollo-card-overlay {
+    padding: 20px 16px 16px;
+  }
+
+  .apollo-card-title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .apollo-blogs-title {
+    font-size: 32px;
+  }
+
+  .apollo-blogs-slider {
+    height: 360px;
+  }
+
+  .apollo-nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .apollo-blogs-content {
+    gap: 30px;
+  }
+
+  .apollo-blogs-slider {
+    height: 400px;
+  }
+
+  .apollo-dots-navigation {
+    display: none;
+  }
+}

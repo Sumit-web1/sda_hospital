@@ -1,0 +1,114 @@
+/* --- Section Wrapper & Heading --- */
+.logo-marquee-section {
+  width: 100%;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.marquee-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .marquee-heading {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-heading {
+    font-size: 1.4rem;
+  }
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #e0f7fa, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #e0f7fa, transparent);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-wrapper {
+  flex: 0 0 auto;
+  margin: 0 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo-wrapper img {
+  height: 70px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .logo-wrapper {
+    margin: 0 20px;
+  }
+  .logo-wrapper img {
+    height: 60px;
+  }
+  .marquee {
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-wrapper {
+    margin: 0 15px;
+  }
+  .logo-wrapper img {
+    height: 50px;
+  }
+  .marquee {
+    animation-duration: 20s;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+

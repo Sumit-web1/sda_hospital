@@ -1,0 +1,443 @@
+.testimonials-section {
+  position: relative;
+  margin: 0;
+  padding: 80px 0 100px 0;
+  /* background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%); */
+  overflow: hidden;
+}
+
+.testimonials-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../assets/testimonial-bg.webp);
+  background-size: cover;
+  z-index: 1;
+}
+
+.testimonials-container {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.testimonials-badge-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonials-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Slider */
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  gap: 30px;
+}
+
+.testimonial-slide {
+  flex: 0 0 calc(33.333% - 20px); /* Show exactly 3 cards */
+  width: calc(33.333% - 20px);
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.39);
+  border-radius: 20px;
+  border: 1px solid #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  backdrop-filter: blur(5px);
+}
+
+/* Dots Navigation */
+.testimonials-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.testimonials-dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: #D1D5DB;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonials-dots .dot.active {
+  background-color: #4A90E2;
+}
+
+.testimonials-dots .dot:hover {
+  background-color: #4A90E2;
+  opacity: 0.8;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.288);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card-1 {
+  margin-top: 0;
+}
+
+.testimonial-card-2 {
+  /* margin-top: 40px; */
+}
+
+.testimonial-card-3 {
+  /* margin-top: 20px; */
+}
+
+.testimonial-quote-icon {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 30px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-patient-info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-patient-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.testimonial-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonial-star {
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.testimonial-star-filled {
+  color: #fbbf24;
+}
+
+.testimonial-star-empty {
+  color: #e5e7eb;
+}
+
+.testimonial-rating-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-left: 4px;
+}
+
+/* Navigation Controls */
+.testimonials-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.testimonials-nav-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.testimonials-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.testimonials-nav-btn.prev:hover {
+  transform: translateX(-2px) scale(1.05);
+}
+
+.testimonials-nav-btn.next:hover {
+  transform: translateX(2px) scale(1.05);
+}
+
+/* Dots Indicator */
+.testimonials-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.testimonials-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonials-dots .dot.active {
+  background: #4F46E5;
+  transform: scale(1.2);
+}
+
+.testimonials-dots .dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .testimonial-card-2,
+  .testimonial-card-3 {
+    margin-top: 0;
+  }
+
+  .testimonials-title {
+    font-size: 40px;
+  }
+
+  /* Slider responsive styles for tablet */
+  .testimonials-slider {
+    max-width: 900px;
+  }
+
+  .testimonial-slide {
+    flex: 0 0 calc(50% - 15px);
+    width: calc(50% - 15px);
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .testimonials-background{
+    background-size: cover;
+  }
+
+  .testimonials-container {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .testimonial-card {
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 25px;
+    margin-top: 0 !important;
+  }
+
+  .testimonials-title {
+    font-size: 32px;
+  }
+
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .testimonials-dots .dot{
+    width: 4px !important;
+    height: 4px !important;
+  }
+
+  .testimonials-dots .dot.active{
+    width: 4px !important;
+    height: 4px !important;
+    transform: scale(1.1) !important;
+  }
+
+  /* Slider responsive styles - Show 1 slide per view on mobile */
+  .testimonials-slider {
+    overflow: hidden;
+    padding-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .testimonials-track {
+    width: 100%;
+    gap: 0;
+  }
+
+  .testimonial-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 20px;
+    min-height: 250px;
+    margin: 0 auto;
+  }
+}
+
+/* Wrapper for title and rating */
+.testimonials-title-wrapper {
+  position: relative; /* For absolute positioning of rating */
+  text-align: center; /* Keep title centered */
+  margin-bottom: 2rem;
+}
+
+/* Section title */
+.testimonials-title {
+  font-size: 2.5rem; /* Bigger title */
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Rating summary container */
+.testimonials-rating-summary {
+  position: absolute;
+  top: 50%;
+  right: 0; /* Stick to right */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Stars */
+.rating-stars {
+  color: #FBBF24; /* Gold stars */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Rating text */
+.rating-text {
+  font-size: 1.2rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Google logo */
+.google-logo {
+  width: 70px;
+  height: auto;
+}
+
+/* Responsive: on smaller screens, move rating below title */
+@media (max-width: 768px) {
+  .testimonials-rating-summary {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+}

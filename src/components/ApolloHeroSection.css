@@ -1,0 +1,241 @@
+/* Apollo Hero Section - Exact Apollo Hospital Design */
+.apollo-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Video */
+.apollo-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.apollo-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apollo-hero-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.apollo-hero-fallback img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apollo-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 191, 0.8) 0%,
+    rgba(0, 150, 136, 0.6) 50%,
+    rgba(76, 175, 80, 0.4) 100%
+  );
+  z-index: 2;
+}
+
+/* Main Content */
+.apollo-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.apollo-hero-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Search Section - Apollo Style */
+.apollo-search-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.apollo-search-container {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.apollo-search-input {
+  width: 100%;
+  padding: 18px 60px 18px 25px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  border-radius: 50px;
+}
+
+.apollo-search-input::placeholder {
+  color: #666;
+  font-weight: 400;
+}
+
+.apollo-search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #FF6B35;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apollo-search-button:hover {
+  background: #E55A2B;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Action Buttons - Apollo Style */
+.apollo-action-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.apollo-action-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 15px;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 180px;
+  justify-content: space-between;
+}
+
+.apollo-action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.apollo-btn-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.apollo-btn-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.apollo-btn-arrow {
+  color: #FF6B35;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.apollo-action-btn:hover .apollo-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apollo-hero-container {
+    gap: 40px;
+    padding: 0 15px;
+  }
+
+  .apollo-search-input {
+    padding: 15px 50px 15px 20px;
+    font-size: 14px;
+  }
+
+  .apollo-search-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .apollo-action-buttons {
+    gap: 15px;
+  }
+
+  .apollo-action-btn {
+    padding: 15px 20px;
+    min-width: 160px;
+  }
+
+  .apollo-btn-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apollo-hero-section {
+    height: 100vh;
+  }
+
+  .apollo-hero-container {
+    gap: 30px;
+  }
+
+  .apollo-action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .apollo-action-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

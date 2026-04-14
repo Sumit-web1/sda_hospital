@@ -1,0 +1,20 @@
+{
+  "routes": [
+    { "src": "/admin-login", "dest": "/index.html" },
+    { "src": "/admin-dashboard", "dest": "/index.html" },
+
+    { "src": "/doctor-login", "dest": "/index.html" },
+    { "src": "/doctor-dashboard", "dest": "/index.html" },
+
+    { "src": "/receptionist-login", "dest": "/index.html" },
+    { "src": "/receptionist-dashboard", "dest": "/index.html" },
+
+    { "src": "/find-doctor", "dest": "/index.html" },
+    { "src": "/about", "dest": "/index.html" },
+    { "src": "/doctors", "dest": "/index.html" },
+    { "src": "/services", "dest": "/index.html" },
+    { "src": "/departments", "dest": "/index.html" },
+
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

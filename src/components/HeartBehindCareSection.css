@@ -1,0 +1,298 @@
+.heart-behind-care-section {
+  background-color: #fff;
+  padding: 60px 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .heart-behind-care-section {
+    padding: 80px 0;
+  }
+}
+
+.heart-behind-care-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #F4F7FF;
+  border-radius: 20px;
+}
+
+@media (min-width: 640px) {
+  .heart-behind-care-container {
+    padding: 24px;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heart-behind-care-container {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .heart-behind-care-container {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heart-behind-care-container {
+    padding: 0 32px;
+  }
+}
+
+.heart-behind-care-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .heart-behind-care-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.heart-behind-care-text {
+  max-width: 600px;
+}
+
+.heart-behind-care-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .heart-behind-care-title {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heart-behind-care-title {
+    font-size: 48px;
+  }
+}
+
+.heart-behind-care-highlight {
+  color: #06b6d4;
+  padding: 0 20px;
+  margin: 0 5px;
+  background: linear-gradient(to right, #F0EBFF, #D0DFFF);
+  border-radius: 52px;
+  line-height: 1;
+}
+
+.heart-behind-care-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .heart-behind-care-description {
+    font-size: 18px;
+  }
+}
+
+.heart-behind-care-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .heart-behind-care-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.heart-behind-care-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.heart-behind-care-check {
+  width: 24px;
+  height: 24px;
+  background-color: #06b6d4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.heart-behind-care-check svg {
+  color: white;
+  width: 16px;
+  height: 16px;
+}
+
+.heart-behind-care-feature-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .heart-behind-care-feature-text {
+    font-size: 16px;
+  }
+}
+
+.heart-behind-care-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+}
+
+@media (min-width: 1024px) {
+  .heart-behind-care-image {
+    justify-content: flex-end;
+  }
+}
+
+.heart-behind-care-doctor {
+  position: relative;
+  width: 100%;
+  /* max-width: 500px; */
+  height: 600px;
+  /* background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../assets/DSC00764-min.JPG);
+  background-size: cover;
+  /* overflow: hidden; */
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
+}
+
+.heart-behind-care-doctor img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+  .heart-behind-care-doctor {
+    height: 400px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heart-behind-care-doctor {
+    height: 300px;
+    max-width: 300px;
+  }
+}
+
+.heart-behind-care-doctor-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+.heart-behind-care-doctor-emoji {
+  font-size: 120px;
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .heart-behind-care-doctor-emoji {
+    font-size: 80px;
+  }
+}
+
+/* Decorative elements */
+.heart-behind-care-doctor::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #06b6d4, #0891b2);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.heart-behind-care-doctor::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #22d3ee, #06b6d4);
+  border-radius: 50%;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .heart-behind-care-section {
+    padding: 60px 0;
+  }
+  
+  .heart-behind-care-content {
+    gap: 40px;
+  }
+  
+  .heart-behind-care-title {
+    text-align: center;
+  }
+  
+  .heart-behind-care-description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .heart-behind-care-section {
+    padding: 40px 10px;
+  }
+  
+  .heart-behind-care-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .heart-behind-care-title {
+    font-size: 28px;
+  }
+  
+  .heart-behind-care-description {
+    font-size: 16px;
+  }
+  .heart-behind-care-container{
+    padding: 25px 10px 10px 10px;
+  }
+  .heart-behind-care-doctor{
+    max-width: 100%;
+  }
+}
